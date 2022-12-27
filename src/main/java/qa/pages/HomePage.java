@@ -47,6 +47,7 @@ public class HomePage {
 	private By assetmanagementMenu = By.xpath("//span[normalize-space()='Asset Management']");
 	private By securitymanagemnetmenu = By.xpath("//span[contains(text(),\"Security Management\")]");
 	private By inetgrationMeshMenu = By.xpath("//span[contains(text(),\"Integration Mesh\")]");
+	private By Botpriselink = By.xpath("(//div[contains(text(),\"Botprise Lab\")])[1]");
 	
 	public HomePage(WebDriver driver) {
 		this.driver = driver;
@@ -56,15 +57,19 @@ public class HomePage {
 		return driver.getTitle();
 	}
 
-	public String getcomanyName() {
+	public String getcomanyName() throws InterruptedException {
 
-		WebDriverWait wait = new WebDriverWait(driver, 30);
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//td[normalize-space()='Botprise Lab']")));
-		// click on the compose button as soon as the "compose" button is visible
-		WebElement compnamefromlocator = driver.findElement(By.xpath("//td[normalize-space()='Botprise Lab']"));
-		String cbotpriselabname = compnamefromlocator.getText();
-
-		return cbotpriselabname;
+//		WebDriverWait wait = new WebDriverWait(driver, 30);
+//		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//td[normalize-space()='Botprise Lab']")));
+//		// click on the compose button as soon as the "compose" button is visible
+//		WebElement compnamefromlocator = driver.findElement(By.xpath("//td[normalize-space()='Botprise Lab']"));
+//		String cbotpriselabname = compnamefromlocator.getText();
+//
+//		return cbotpriselabname;
+		String nameofbotprislab =fluentwaitt(Botpriselink).getText();
+		return nameofbotprislab;
+		
+		
 	}
 
 	public CatalogPage gotoCatalogPage() throws InterruptedException {

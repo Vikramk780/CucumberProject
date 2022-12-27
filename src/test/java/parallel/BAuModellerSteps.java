@@ -1,5 +1,7 @@
 package parallel;
 
+import java.awt.AWTException;
+
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -31,15 +33,16 @@ public class BAuModellerSteps {
 		
 		
 	}
+	@Then("create ec2BAU through modeller")
+	public void create_ec2bau_through_modeller() throws InterruptedException, AWTException {
+		BauModellerPage.createEc2bau();
+	}
 
 	@Then("create BAU through modeller")
-	public void create_bau_through_modeller() throws InterruptedException {
+	public void create_bau_through_modeller() throws InterruptedException, AWTException {
 	   
 		BauModellerPage.CreateBAUThroughModeller();
 	}
-	@Then("create ec2BAU through modeller")
-	public void create_ec2bau_through_modeller() throws InterruptedException {
-		BauModellerPage.createEc2bau();
-	}
+	
 	
 }

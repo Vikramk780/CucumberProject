@@ -35,7 +35,7 @@ public void user_has_already_loggen_to_application(DataTable dataTable) throws I
 	
 	DriverFactory.getDriver().get("https://stageapp.botprise.com");
 	
-	homePage = loginPage.doLogin(userName, password);
+	homePage = loginPage.doLogin1(userName, password);
 	
 	
 }
@@ -53,12 +53,12 @@ public void user_gets_copany_name(DataTable dataTable) {
 }
 
 @Then("company name should be {string}")
-public void company_name_should_be(String companyName) {
+public void company_name_should_be(String companyName) throws InterruptedException {
 	 companyname = homePage.getcomanyName();
 	 
 System.out.println(companyname);
 
-Assert.assertTrue(companyname.contains(companyName));
+Assert.assertEquals(companyname,companyName);
 System.out.println(companyName);
 
 

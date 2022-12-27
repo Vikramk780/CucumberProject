@@ -89,5 +89,16 @@ public RegistrationPage userClickOnsignUpBtn() {
 		return new HomePage(driver);
 	}
 	
+	public HomePage doLogin1(String un, String pw) throws InterruptedException {
+		driver.findElement(emailId).sendKeys(un);
+		driver.findElement(password).sendKeys(pw);
+		driver.findElement(loginButton).click();
+		Thread.sleep(2000);
+		
+		
+		
+		return new HomePage(driver);
+	}
+	
 	
 }

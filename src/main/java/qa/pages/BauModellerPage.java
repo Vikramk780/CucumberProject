@@ -7,6 +7,7 @@ import java.time.Duration;
 
 import org.apache.commons.lang3.RandomStringUtils;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -19,16 +20,16 @@ public class BauModellerPage {
 	private By crratebtn = By.xpath("/html[1]/body[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]");
 	
 	private By BauoptionFromFrop = By.xpath("(//li[contains(text(),\"BAU (Ansible)\")])[1]");
-	private By ansiblecategorydrop = By.xpath("//div[@id='module']");
+	private By ansiblecategorydrop = By.xpath("//input[@id='module']");
 	
 	private By s3category = By.xpath("//li[contains(text(),\"amazon_aws_s3_bucket\")]");
 	private By ec2category = By.xpath("//li[contains(text(),\"amazon_aws_ec2_instance\")]");
-	private By playbookdrop = By.xpath("//div[@id='playbook']");
+	private By playbookdrop = By.xpath("//input[@id='playbook']");
 	
 	private By s3playbook = By.xpath("//li[contains(text(),\"s3_bucket_creation\")]");
 	private By ec2playbook = By.xpath("//li[contains(text(),\"ec2_creation\")]");
 	
-	private By integrationProfile = By.xpath("//div[@id='mui-component-select-integrations']");
+	private By integrationProfile = By.xpath("(//button[@title='Open'])[3]");
 	private By awsintegration = By.xpath("//li[normalize-space()='AWS - Cloud']");
 	
 	private By functioname = By.xpath("//input[@id='name']");
@@ -36,12 +37,12 @@ public class BauModellerPage {
 	private By description = By.xpath("//textarea[@id='description']");
 	
 	private By nextbtn = By.xpath("//button[@type='submit']");
-	private By integrationinstancedrop = By.xpath("//div[@id='instance']");
+	private By integrationinstancedrop = By.xpath("//input[@id='instance']");
 	
 	private By selectintegrationprof = By.xpath("//li[contains(text(),\"Botprise_staging\")]");
 	private By s3bucketnameinaws = By.xpath("//input[@name='name']");
 	
-	private By textbtn = By.xpath("(//button[@type=\"button\"])[14]");
+	private By textbtn = By.xpath("(//button[@type=\"button\"])[16]");
 	private By checkboxaccept = By.xpath("//input[@name='accept_output']");
 	
 	private By bauSave = By.xpath("//button[@type='submit']");
@@ -53,7 +54,7 @@ public class BauModellerPage {
 	private By assignpublicip = By.xpath("//input[@name='assign_public_ip']");
 	private By instance_type = By.xpath("//input[@name='instance_type']");
 	private By region = By.xpath("//input[@name='region']");
-	private By capabilityselectdrp = By.xpath("//div[@id=\"capability\"]");
+	private By capabilityselectdrp = By.xpath("//input[@id='capability']");
 	private By otherprofile = By.xpath("//li[normalize-space()='Other']");
 	
 	
@@ -61,9 +62,10 @@ public class BauModellerPage {
 	
 	private By bauapibtn = By.xpath("//body/div[@id='add-menu']/div[3]/ul[1]/li[2]");
 	private By servicenowprofile = By.xpath("//li[normalize-space()='ServiceNow - ITSM']");
-	private By baucapability = By.xpath("//div[@id='capability']");
+	private By baucapability = By.xpath("//input[@id='capability']");
 	private By openticketcapa = By.xpath("//li[normalize-space()='Open Ticket']");
 	private By functName = By.xpath("//input[@id='functionName']");
+	private By integratPropfiofapibau = By.xpath("(//button[@title='Open'])[1]");
 	
 	private By descriptiond = By.xpath("//textarea[@id='description']");
 	
@@ -99,31 +101,76 @@ public BauModellerPage(WebDriver driver) {
 	
 
 
-public void CreateBAUThroughModeller() throws InterruptedException {
-	driver.findElement(crratebtn).click();
+public void CreateBAUThroughModeller() throws InterruptedException, AWTException {
+
+	driver.navigate().refresh();
+	
+	fluentwaitt(crratebtn).click();
 	Thread.sleep(3000);
+	
 	driver.findElement(BauoptionFromFrop).click();
 	Thread.sleep(2000);
 	driver.findElement(ansiblecategorydrop).click();
+	Thread.sleep(2000);
+	
+	Robot r = new Robot();
+	
+	for(int i=0; i<5; i++) {
+		r.keyPress(KeyEvent.VK_DOWN);
+		r.keyRelease(KeyEvent.VK_DOWN);
+		Thread.sleep(300);
+		if(i==4) {
+			r.keyPress(KeyEvent.VK_ENTER);
+			r.keyRelease(KeyEvent.VK_ENTER);
+		}
+		
+	}
+	
+	
+	Thread.sleep(1000);
+	fluentwaitt(playbookdrop).click();
 	Thread.sleep(3000);
-	driver.findElement(s3category).click();
+	for(int i=0; i<5; i++) {
+		r.keyPress(KeyEvent.VK_DOWN);
+		r.keyRelease(KeyEvent.VK_DOWN);
+		Thread.sleep(300);
+		if(i==4) {
+			r.keyPress(KeyEvent.VK_ENTER);
+			r.keyRelease(KeyEvent.VK_ENTER);
+		}
+		
+	}
+	
+	
+	
+	fluentwaitt(integrationProfile).click();
 	Thread.sleep(3000);
-	driver.findElement(playbookdrop).click();
-	Thread.sleep(3000);
-	driver.findElement(s3playbook).click();
-	Thread.sleep(3000);
-	driver.findElement(integrationProfile).click();
+	r.keyPress(KeyEvent.VK_UP);
+	r.keyPress(KeyEvent.VK_UP);
+	r.keyRelease(KeyEvent.VK_UP);
+	r.keyRelease(KeyEvent.VK_UP);
+	r.keyPress(KeyEvent.VK_ENTER);
+	r.keyRelease(KeyEvent.VK_ENTER);
+	
+	fluentwaitt(capabilityselectdrp).click();
 	Thread.sleep(3000);
 	
-	driver.findElement(awsintegration).click();
-	Thread.sleep(3000);
-	driver.findElement(capabilityselectdrp).click();
-	Thread.sleep(3000);
-	driver.findElement(otherprofile).click();
-	Thread.sleep(3000);
-	String randomeBTUname =RandomStringUtils.random(4,"ab_c_d");
-	String randomeBTUname1 =RandomStringUtils.random(4,"q_w_e");
-	randomeBTUname="test_vkBA_UFromAuto".concat(randomeBTUname);
+	for(int i=1; i<19; i++) {
+		r.keyPress(KeyEvent.VK_DOWN);
+		r.keyRelease(KeyEvent.VK_DOWN);
+		Thread.sleep(500);
+		if(i==18) {
+			r.keyPress(KeyEvent.VK_ENTER);
+			r.keyRelease(KeyEvent.VK_ENTER);
+		}
+		
+	}
+	
+	
+	
+	String randomeBTUname =RandomStringUtils.random(4,"abcd");
+	String randomeBTUname1 =RandomStringUtils.random(4,"qwe");
+	randomeBTUname="test_test_Aus3Create".concat(randomeBTUname);
 	randomeBTUname=randomeBTUname.concat(randomeBTUname1);
 	driver.findElement(functioname).sendKeys(randomeBTUname);
 	Thread.sleep(2000);
@@ -134,46 +181,95 @@ public void CreateBAUThroughModeller() throws InterruptedException {
 	Thread.sleep(3000);
 	driver.findElement(integrationinstancedrop).click();
 	Thread.sleep(3000);
-	driver.findElement(selectintegrationprof).click();
-	Thread.sleep(3000);
-	String randomeBTUname11 =RandomStringUtils.random(4,"buct");
-	String randomeBTUname2 =RandomStringUtils.random(4,"asd");
-	randomeBTUname="testbucket".concat(randomeBTUname11);
-	randomeBTUname=randomeBTUname.concat(randomeBTUname2);
-	driver.findElement(s3bucketnameinaws).sendKeys(randomeBTUname);
-	Thread.sleep(2000);
+	for(int i=1; i<2; i++) {
+		r.keyPress(KeyEvent.VK_DOWN);
+		r.keyRelease(KeyEvent.VK_DOWN);
+		Thread.sleep(500);
+		if(i==1) {
+			r.keyPress(KeyEvent.VK_ENTER);
+			r.keyRelease(KeyEvent.VK_ENTER);
+		}
+		
+	}
+
+	Thread.sleep(1000);
+	
+	String randomeBAUname11 =RandomStringUtils.random(4,"abcd");
+	String randomeBAUname2 =RandomStringUtils.random(4,"qwe");
+	randomeBTUname="testvk".concat(randomeBAUname11);
+	randomeBTUname=randomeBTUname.concat(randomeBAUname2);
+	
+	
+	fluentwaitt(s3bucketnameinaws).sendKeys(randomeBTUname);
+	
+	
 	driver.findElement(textbtn).click();
-	Thread.sleep(16000);
+	Thread.sleep(15000);
 	driver.findElement(checkboxaccept).click();
-	Thread.sleep(3000);
+	Thread.sleep(2000);
 	driver.findElement(bauSave).click();
 	Thread.sleep(5000);
 	
 }
 
-public void createEc2bau() throws InterruptedException {
+public void createEc2bau() throws InterruptedException, AWTException {
+	driver.navigate().refresh();
+	Thread.sleep(3000);
+	fluentwaitt(crratebtn).click();
+	Thread.sleep(3000);
 	
 	driver.findElement(BauoptionFromFrop).click();
 	Thread.sleep(2000);
-	
 	driver.findElement(ansiblecategorydrop).click();
-	Thread.sleep(3000);
-	driver.findElement(ec2category).click();
-	Thread.sleep(3000);
-	driver.findElement(playbookdrop).click();
-	Thread.sleep(3000);
-	driver.findElement(ec2playbook).click();
-	Thread.sleep(3000);
-	driver.findElement(integrationProfile).click();
-	Thread.sleep(4000);
+	Thread.sleep(2000);
 	
-	driver.findElement(awsintegration).click();
+	Robot r = new Robot();
+	r.keyPress(KeyEvent.VK_DOWN);
+//	r.keyPress(KeyEvent.VK_DOWN);
+	r.keyRelease(KeyEvent.VK_DOWN);
+	r.keyPress(KeyEvent.VK_ENTER);
+	r.keyRelease(KeyEvent.VK_ENTER);
+	Thread.sleep(1000);
+	fluentwaitt(playbookdrop).click();
+	Thread.sleep(3000);
+	for(int i=0; i<6; i++) {
+		r.keyPress(KeyEvent.VK_DOWN);
+		r.keyRelease(KeyEvent.VK_DOWN);
+		Thread.sleep(500);
+		if(i==5) {
+			r.keyPress(KeyEvent.VK_ENTER);
+			r.keyRelease(KeyEvent.VK_ENTER);
+		}
+		
+	}
+	
+	
+	
+	fluentwaitt(integrationProfile).click();
+	Thread.sleep(3000);
+	r.keyPress(KeyEvent.VK_UP);
+	r.keyPress(KeyEvent.VK_UP);
+	r.keyRelease(KeyEvent.VK_UP);
+	r.keyRelease(KeyEvent.VK_UP);
+	r.keyPress(KeyEvent.VK_ENTER);
+	r.keyRelease(KeyEvent.VK_ENTER);
+	
+	fluentwaitt(capabilityselectdrp).click();
 	Thread.sleep(3000);
 	
-	driver.findElement(capabilityselectdrp).click();
-	Thread.sleep(3000);
-	driver.findElement(otherprofile).click();
-	Thread.sleep(3000);
+	for(int i=1; i<19; i++) {
+		r.keyPress(KeyEvent.VK_DOWN);
+		r.keyRelease(KeyEvent.VK_DOWN);
+		Thread.sleep(500);
+		if(i==18) {
+			r.keyPress(KeyEvent.VK_ENTER);
+			r.keyRelease(KeyEvent.VK_ENTER);
+		}
+		
+	}
+	
+	
+	
 	String randomeBTUname =RandomStringUtils.random(4,"abcd");
 	String randomeBTUname1 =RandomStringUtils.random(4,"qwe");
 	randomeBTUname="test_test_Au".concat(randomeBTUname);
@@ -187,8 +283,17 @@ public void createEc2bau() throws InterruptedException {
 	Thread.sleep(3000);
 	driver.findElement(integrationinstancedrop).click();
 	Thread.sleep(3000);
-	driver.findElement(selectintegrationprof).click();
-	Thread.sleep(3000);
+	for(int i=1; i<2; i++) {
+		r.keyPress(KeyEvent.VK_DOWN);
+		r.keyRelease(KeyEvent.VK_DOWN);
+		Thread.sleep(500);
+		if(i==1) {
+			r.keyPress(KeyEvent.VK_ENTER);
+			r.keyRelease(KeyEvent.VK_ENTER);
+		}
+		
+	}
+
 	
 	
 	String randomeBAUname11 =RandomStringUtils.random(4,"abcd");
@@ -217,29 +322,54 @@ public void createEc2bau() throws InterruptedException {
 	driver.findElement(bauSave).click();
 	Thread.sleep(5000);
 	
+
 }
 
 public void createOpenTicketBAU() throws InterruptedException, AWTException {
-	
+	Robot r = new Robot();
 	fluentwaitt(crratebtn).click();
 	Thread.sleep(2000);
 	
 	fluentwaitt(bauapibtn).click();
 	Thread.sleep(3000);
-	fluentwaitt(integrationProfile).click();
+	
+	fluentwaitt(integratPropfiofapibau).click();
 	Thread.sleep(3000);
 	
-	fluentwaitt(servicenowprofile).click();
-	Thread.sleep(3000);
+	for(int i=1; i<2; i++) {
+		r.keyPress(KeyEvent.VK_DOWN);
+		r.keyRelease(KeyEvent.VK_DOWN);
+		if(i==1) {
+			r.keyPress(KeyEvent.VK_ENTER);
+			r.keyRelease(KeyEvent.VK_ENTER);
+		}
+		
+	}
+	
+	
+	
+	
 	fluentwaitt(baucapability).click();
-	fluentwaitt(openticketcapa).click();
+	
+	for(int i=1; i<2; i++) {
+		r.keyPress(KeyEvent.VK_DOWN);
+		r.keyRelease(KeyEvent.VK_DOWN);
+		if(i==1) {
+			r.keyPress(KeyEvent.VK_ENTER);
+			r.keyRelease(KeyEvent.VK_ENTER);
+		}
+		
+	}
+	
+	
+
 	String nameofBAu = RandomStringUtils.random(4,"a_b_cd");
 	
 	String name1 = "OpenBAU".concat(nameofBAu);
 	String original = name1+nameofBAu;
 	fluentwaitt(functName).sendKeys(original);
 	fluentwaitt(descriptiond).sendKeys("Test_"+original);
-	Robot r = new Robot();
+	
 	
 	fluentwaitt(inputparams).sendKeys("Description");
 	r.keyPress(KeyEvent.VK_ENTER);
@@ -257,7 +387,17 @@ public void createOpenTicketBAU() throws InterruptedException, AWTException {
 	
 	fluentwaitt(bauSave).click();
 	fluentwaitt(integrationinstancedrop).click();
-	fluentwaitt(selectservicenowinstance).click();
+	
+	for(int i=1; i<4; i++) {
+		r.keyPress(KeyEvent.VK_DOWN);
+		r.keyRelease(KeyEvent.VK_DOWN);
+		if(i==3) {
+			r.keyPress(KeyEvent.VK_ENTER);
+			r.keyRelease(KeyEvent.VK_ENTER);
+		}
+		
+	}
+	
 	fluentwaitt(callerId).sendKeys("admin@example.com");
 	
 	fluentwaitt(shortdescription).sendKeys("Short Description");

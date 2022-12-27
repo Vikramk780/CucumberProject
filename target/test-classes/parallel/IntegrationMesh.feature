@@ -1,4 +1,4 @@
-Feature:Verify Integration Mesh
+Feature: Verify Integration Mesh
 
 Scenario:Integration Creation From Integration Mesh
 Given User logs into stageapp
