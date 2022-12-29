@@ -126,7 +126,7 @@
         <version>3.0.0-M7</version>
         <configuration>
           <includes>
-            <include>**/TestNgRunner.java</include>
+            <include>**/RunCucumberIT.java</include>
           </includes>
         </configuration>
       </plugin>
