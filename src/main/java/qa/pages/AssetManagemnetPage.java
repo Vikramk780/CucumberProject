@@ -69,7 +69,7 @@ public class AssetManagemnetPage {
 		
 		fluentwaitt(choosebtn).click();
 		Thread.sleep(3000);
-		StringSelection filepath= new  StringSelection("C:\\Users\\Deva\\Downloads\\sample.csv");
+		StringSelection filepath= new  StringSelection("./sample.csv");
 		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(filepath, null);
 		Thread.sleep(1000);
 		rr.keyPress(KeyEvent.VK_CONTROL);
