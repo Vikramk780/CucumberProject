@@ -35,7 +35,7 @@
 <a href="#"><span class="badge badge-primary">Botprise Report</span></a>
 </li>
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">Dec 27, 2022 02:53:54 pm</span></a>
+<a href="#"><span class="badge badge-primary">Dec 29, 2022 12:44:51 PM</span></a>
 </li>
 </ul>
 </div>
@@ -52,6 +52,11 @@
 <span class="ico"><i class="fa fa-list"></i></span>
 </a>
 </li>
+<li class="nav-item dropdown" onclick="toggleView('exception-view')">
+<a id="nav-exception" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-bug"></i></span>
+</a>
+</li>
 </ul>
 </div>
 </div>      <div class="vcontainer">
@@ -61,25 +66,25 @@
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Started</p>
-<h3>Dec 27, 2022 02:53:54 pm</h3>
+<h3>Dec 29, 2022 12:44:51 PM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Ended</p>
-<h3>Dec 27, 2022 02:54:28 pm</h3>
+<h3>Dec 29, 2022 12:44:58 PM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0 text-pass">Features Passed</p>
-<h3>1</h3>
+<h3>0</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0 text-fail">Features Failed</p>
-<h3>0</h3>
+<h3>9</h3>
 </div></div>
 </div>
 </div>
@@ -95,12 +100,12 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='100%'>
-<b>1</b> features passed
+<div><small data-tooltip='0%'>
+<b>0</b> features passed
 </small>
 </div>
 <div>
-<small data-tooltip='0%'><b>0</b> features failed,
+<small data-tooltip='100%'><b>9</b> features failed,
 <b>0</b> skipped, <b data-tooltip='0%'>0</b> others
 </small>
 </div>
@@ -118,9 +123,9 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='100%'><b>2</b> scenarios passed</small></div>
+<div><small data-tooltip='0%'><b>0</b> scenarios passed</small></div>
 <div>
-<small data-tooltip='0%'><b>0</b> scenarios failed,
+<small data-tooltip='100%'><b>12</b> scenarios failed,
 <b>0</b> skipped, <b data-tooltip='%'>0</b> others
 </small>
 </div>
@@ -138,10 +143,10 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='100%'><b>8</b> steps passed</small></div>
+<div><small data-tooltip='0%'><b>0</b> steps passed</small></div>
 <div>
-<small data-tooltip='0%'><b>0</b> steps failed,
-<b>0</b> skipped, <b data-tooltip='%'>0</b> others
+<small data-tooltip='37%'><b>24</b> steps failed,
+<b>40</b> skipped, <b data-tooltip='%'>0</b> others
 </small>
 </div>
 </div>
@@ -157,7 +162,7 @@
 </div></div>
 <script>
 var timeline = {
-"Home Page feature":32.259
+"AssetManagmenet":3.401,"BAU Modeller test":0.173,"Create OpenTicket In Servicenow BAU":0.127,"verification of BTU creation and check existance":0.13,"Home Page feature":0.288,"Verify Integration Mesh":0.146,"Integration Modeller test":0.132,"login page Test":0.615,"Security ManageMent":0.1
 };
 </script>
 <div class="row">
@@ -168,16 +173,16 @@ var timeline = {
 <thead><tr class="bg-gray"><th>Name</th><th>Value</th></tr></thead>
 <tbody>
 <tr>
-<td>AppName</td>
-<td>Botprise</td>
+<td>build</td>
+<td>ED_PHASE_ONE</td>
 </tr>
 <tr>
 <td>user</td>
 <td>Vikram</td>
 </tr>
 <tr>
-<td>build</td>
-<td>ED_PHASE_ONE</td>
+<td>AppName</td>
+<td>Botprise</td>
 </tr>
 <tr>
 <td>os</td>
@@ -192,21 +197,21 @@ var timeline = {
 <script>
 var statusGroup = {
 parentCount: 5,
-passParent: 1,
-failParent: 0,
+passParent: 0,
+failParent: 9,
 warningParent: 0,
 skipParent: 0,
 childCount: 5,
-passChild: 2,
-failChild: 0,
+passChild: 0,
+failChild: 12,
 warningChild: 0,
 skipChild: 0,
 infoChild: 0,
 grandChildCount: 5,
-passGrandChild: 8,
-failGrandChild: 0,
+passGrandChild: 0,
+failGrandChild: 24,
 warningGrandChild: 0,
-skipGrandChild: 0,
+skipGrandChild: 40,
 infoGrandChild: 0,
 eventsCount: 5,
 };
@@ -220,7 +225,7 @@ eventsCount: 5,
 <li class="dropdown">
 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
 <ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
-<a class="dropdown-item" status="pass" href="#"><span>Pass</span><span class="status success"></span></a>
+<a class="dropdown-item" status="fail" href="#"><span>Fail</span><span class="status danger"></span></a>
 <div class="dropdown-divider"></div>
 <a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
 </ul>
@@ -228,25 +233,25 @@ eventsCount: 5,
 </ul>
 </div>    <div class="test-list-wrapper scrollable">
       <ul class="test-list-item">
-        <li class="test-item"  status="pass" test-id="1"
+        <li class="test-item"  status="fail" test-id="1"
           author=""
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">Home Page feature</p>
+            <p class="name">AssetManagmenet</p>
             <p class="text-sm">
-              <span>2:53:55 pm</span> / <span>00:00:32:259</span>
-              <span class="badge pass-bg log float-right">Pass</span>
+              <span>12:44:52 PM</span> / <span>00:00:03:401</span>
+              <span class="badge fail-bg log float-right">Fail</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">Home Page feature</h5>
-<span class='badge badge-success'>12.27.2022 2:53:55 pm</span>
-<span class='badge badge-danger'>12.27.2022 2:54:28 pm</span>
-<span class='badge badge-default'>00:00:32:259</span>
+<h5 class="test-status text-fail">AssetManagmenet</h5>
+<span class='badge badge-success'>12.29.2022 12:44:52 PM</span>
+<span class='badge badge-danger'>12.29.2022 12:44:56 PM</span>
+<span class='badge badge-default'>00:00:03:401</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
@@ -258,31 +263,595 @@ eventsCount: 5,
   <div class="card">
     <div class="card-header" role="tab">
       <div class="card-title">
-        <div class="node" id="2"><span class="badge log pass-bg mr-2">Pass</span>Home page title</div>
+        <div class="node" id="2"><span class="badge log fail-bg mr-2">Fail</span>Go to assetmanagement and create assets</div>
       </div>
     </div>
-        <div class="collapse">
+        <div class="">
           <div class="card-body">
-              <div class="step pass-bg" title="parallel.HomePageSteps.user_has_already_loggen_to_application(io.cucumber.datatable.DataTable)">
+              <div class="step fail-bg" title="BEFORE">
+                <span>parallel.ApplicationHooks.launchBrowser()</span>
+      <div>
+        <textarea disabled class="code-block">org.openqa.selenium.WebDriverException: unknown error: cannot find Chrome binary
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'ip-172-31-89-32.ec2.internal', ip: '172.31.89.32', os.name: 'Linux', os.arch: 'amd64', os.version: '5.10.157-139.675.amzn2.x86_64', java.version: '1.8.0_342'
+Driver info: driver.version: ChromeDriver
+remote stacktrace: #0 0x55c7f399c2a3 <unknown>
+#1 0x55c7f375af77 <unknown>
+#2 0x55c7f3781047 <unknown>
+#3 0x55c7f377f7d0 <unknown>
+#4 0x55c7f37c00b7 <unknown>
+#5 0x55c7f37bfa5f <unknown>
+#6 0x55c7f37b7903 <unknown>
+#7 0x55c7f378aece <unknown>
+#8 0x55c7f378bfde <unknown>
+#9 0x55c7f39ec63e <unknown>
+#10 0x55c7f39efb79 <unknown>
+#11 0x55c7f39d289e <unknown>
+#12 0x55c7f39f0a83 <unknown>
+#13 0x55c7f39c5505 <unknown>
+#14 0x55c7f3a11ca8 <unknown>
+#15 0x55c7f3a11e36 <unknown>
+#16 0x55c7f3a2d333 <unknown>
+#17 0x7f74ee92644b start_thread
+
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$errorHandler$0(W3CHandshakeResponse.java:62)
+	at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
+	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+	at java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:958)
+	at java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:126)
+	at java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:499)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:486)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472)
+	at java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:152)
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:531)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:131)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:181)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:168)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:123)
+	at qa.factory.DriverFactory.init_driver(DriverFactory.java:31)
+	at parallel.ApplicationHooks.launchBrowser(ApplicationHooks.java:38)
+</textarea>
+      
+      </div>
+              </div>
+              <div class="step skip-bg" title="parallel.AssetManagemnetSteps.loginn_to_stageapp()">
+                <span>Given loginn to stageapp</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="parallel.AssetManagemnetSteps.go_to_assetmanagement_page()">
+                <span>When go to assetmanagement page</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="parallel.AssetManagemnetSteps.create_asset()">
+                <span>Then create asset</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step fail-bg" title="AFTER">
+                <span>parallel.ApplicationHooks.quit()</span>
+      <div>
+        <textarea disabled class="code-block">java.lang.NullPointerException
+	at parallel.ApplicationHooks.quit(ApplicationHooks.java:46)
+</textarea>
+      
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="9"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">BAU Modeller test</p>
+            <p class="text-sm">
+              <span>12:44:56 PM</span> / <span>00:00:00:173</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">BAU Modeller test</h5>
+<span class='badge badge-success'>12.29.2022 12:44:56 PM</span>
+<span class='badge badge-danger'>12.29.2022 12:44:56 PM</span>
+<span class='badge badge-default'>00:00:00:173</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=9</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="10"><span class="badge log fail-bg mr-2">Fail</span>Verification of BAU  modeller.</div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step fail-bg" title="BEFORE">
+                <span>parallel.ApplicationHooks.launchBrowser()</span>
+      <div>
+        <textarea disabled class="code-block">org.openqa.selenium.WebDriverException: unknown error: cannot find Chrome binary
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'ip-172-31-89-32.ec2.internal', ip: '172.31.89.32', os.name: 'Linux', os.arch: 'amd64', os.version: '5.10.157-139.675.amzn2.x86_64', java.version: '1.8.0_342'
+Driver info: driver.version: ChromeDriver
+remote stacktrace: #0 0x55bd69ff02a3 <unknown>
+#1 0x55bd69daef77 <unknown>
+#2 0x55bd69dd5047 <unknown>
+#3 0x55bd69dd37d0 <unknown>
+#4 0x55bd69e140b7 <unknown>
+#5 0x55bd69e13a5f <unknown>
+#6 0x55bd69e0b903 <unknown>
+#7 0x55bd69ddeece <unknown>
+#8 0x55bd69ddffde <unknown>
+#9 0x55bd6a04063e <unknown>
+#10 0x55bd6a043b79 <unknown>
+#11 0x55bd6a02689e <unknown>
+#12 0x55bd6a044a83 <unknown>
+#13 0x55bd6a019505 <unknown>
+#14 0x55bd6a065ca8 <unknown>
+#15 0x55bd6a065e36 <unknown>
+#16 0x55bd6a081333 <unknown>
+#17 0x7f3d04cb044b start_thread
+
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$errorHandler$0(W3CHandshakeResponse.java:62)
+	at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
+	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+	at java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:958)
+	at java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:126)
+	at java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:499)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:486)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472)
+	at java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:152)
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:531)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:131)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:181)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:168)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:123)
+	at qa.factory.DriverFactory.init_driver(DriverFactory.java:31)
+	at parallel.ApplicationHooks.launchBrowser(ApplicationHooks.java:38)
+</textarea>
+      
+      </div>
+              </div>
+              <div class="step skip-bg" title="parallel.BAuModellerSteps.login_to_stageapp()">
+                <span>Given login to stageappp</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="parallel.BAuModellerSteps.go_to_ba_umodeller_page()">
+                <span>When go to BAUmodeller page</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="parallel.BAuModellerSteps.create_bau_through_modeller()">
+                <span>Then create BAU through modeller</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="parallel.BAuModellerSteps.create_ec2bau_through_modeller()">
+                <span>Then create ec2BAU through modeller</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step fail-bg" title="AFTER">
+                <span>parallel.ApplicationHooks.quit()</span>
+      <div>
+        <textarea disabled class="code-block">java.lang.NullPointerException
+	at parallel.ApplicationHooks.quit(ApplicationHooks.java:46)
+</textarea>
+      
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="18"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Create OpenTicket In Servicenow BAU</p>
+            <p class="text-sm">
+              <span>12:44:56 PM</span> / <span>00:00:00:127</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">Create OpenTicket In Servicenow BAU</h5>
+<span class='badge badge-success'>12.29.2022 12:44:56 PM</span>
+<span class='badge badge-danger'>12.29.2022 12:44:56 PM</span>
+<span class='badge badge-default'>00:00:00:127</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=18</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="19"><span class="badge log fail-bg mr-2">Fail</span>verify creation of Open Servicenow Ticket BAU</div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step fail-bg" title="BEFORE">
+                <span>parallel.ApplicationHooks.launchBrowser()</span>
+      <div>
+        <textarea disabled class="code-block">org.openqa.selenium.WebDriverException: unknown error: cannot find Chrome binary
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'ip-172-31-89-32.ec2.internal', ip: '172.31.89.32', os.name: 'Linux', os.arch: 'amd64', os.version: '5.10.157-139.675.amzn2.x86_64', java.version: '1.8.0_342'
+Driver info: driver.version: ChromeDriver
+remote stacktrace: #0 0x560d3dd7e2a3 <unknown>
+#1 0x560d3db3cf77 <unknown>
+#2 0x560d3db63047 <unknown>
+#3 0x560d3db617d0 <unknown>
+#4 0x560d3dba20b7 <unknown>
+#5 0x560d3dba1a5f <unknown>
+#6 0x560d3db99903 <unknown>
+#7 0x560d3db6cece <unknown>
+#8 0x560d3db6dfde <unknown>
+#9 0x560d3ddce63e <unknown>
+#10 0x560d3ddd1b79 <unknown>
+#11 0x560d3ddb489e <unknown>
+#12 0x560d3ddd2a83 <unknown>
+#13 0x560d3dda7505 <unknown>
+#14 0x560d3ddf3ca8 <unknown>
+#15 0x560d3ddf3e36 <unknown>
+#16 0x560d3de0f333 <unknown>
+#17 0x7f38b7e8144b start_thread
+
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$errorHandler$0(W3CHandshakeResponse.java:62)
+	at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
+	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+	at java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:958)
+	at java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:126)
+	at java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:499)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:486)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472)
+	at java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:152)
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:531)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:131)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:181)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:168)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:123)
+	at qa.factory.DriverFactory.init_driver(DriverFactory.java:31)
+	at parallel.ApplicationHooks.launchBrowser(ApplicationHooks.java:38)
+</textarea>
+      
+      </div>
+              </div>
+              <div class="step skip-bg" title="parallel.OpenServicenowTicketBAuSteps.user_logs_in_to_stageapp()">
+                <span>Given User logs in to stageapp</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="parallel.OpenServicenowTicketBAuSteps.user_goes_to_bau_modeller()">
+                <span>When User goes to BAUModeller</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="parallel.OpenServicenowTicketBAuSteps.user_creates_open_ticket_bau()">
+                <span>Then User creates OpenTicketBAU</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step fail-bg" title="AFTER">
+                <span>parallel.ApplicationHooks.quit()</span>
+      <div>
+        <textarea disabled class="code-block">java.lang.NullPointerException
+	at parallel.ApplicationHooks.quit(ApplicationHooks.java:46)
+</textarea>
+      
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="26"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">verification of BTU creation and check existance</p>
+            <p class="text-sm">
+              <span>12:44:56 PM</span> / <span>00:00:00:130</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">verification of BTU creation and check existance</h5>
+<span class='badge badge-success'>12.29.2022 12:44:56 PM</span>
+<span class='badge badge-danger'>12.29.2022 12:44:56 PM</span>
+<span class='badge badge-default'>00:00:00:130</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=26</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="27"><span class="badge log fail-bg mr-2">Fail</span>User creates BTU</div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step fail-bg" title="BEFORE">
+                <span>parallel.ApplicationHooks.launchBrowser()</span>
+      <div>
+        <textarea disabled class="code-block">org.openqa.selenium.WebDriverException: unknown error: cannot find Chrome binary
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'ip-172-31-89-32.ec2.internal', ip: '172.31.89.32', os.name: 'Linux', os.arch: 'amd64', os.version: '5.10.157-139.675.amzn2.x86_64', java.version: '1.8.0_342'
+Driver info: driver.version: ChromeDriver
+remote stacktrace: #0 0x556035cff2a3 <unknown>
+#1 0x556035abdf77 <unknown>
+#2 0x556035ae4047 <unknown>
+#3 0x556035ae27d0 <unknown>
+#4 0x556035b230b7 <unknown>
+#5 0x556035b22a5f <unknown>
+#6 0x556035b1a903 <unknown>
+#7 0x556035aedece <unknown>
+#8 0x556035aeefde <unknown>
+#9 0x556035d4f63e <unknown>
+#10 0x556035d52b79 <unknown>
+#11 0x556035d3589e <unknown>
+#12 0x556035d53a83 <unknown>
+#13 0x556035d28505 <unknown>
+#14 0x556035d74ca8 <unknown>
+#15 0x556035d74e36 <unknown>
+#16 0x556035d90333 <unknown>
+#17 0x7f3e1c0a344b start_thread
+
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$errorHandler$0(W3CHandshakeResponse.java:62)
+	at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
+	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+	at java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:958)
+	at java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:126)
+	at java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:499)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:486)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472)
+	at java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:152)
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:531)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:131)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:181)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:168)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:123)
+	at qa.factory.DriverFactory.init_driver(DriverFactory.java:31)
+	at parallel.ApplicationHooks.launchBrowser(ApplicationHooks.java:38)
+</textarea>
+      
+      </div>
+              </div>
+              <div class="step skip-bg" title="parallel.EventHubPageSteps.userlogin_to_stageapp()">
+                <span>Given Userlogin to stageapp</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="parallel.EventHubPageSteps.user_goes_to_eventhub_page()">
+                <span>When user goes to eventhub page</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="parallel.EventHubPageSteps.user_creates_btu()">
+                <span>Then user creates BTU</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step fail-bg" title="AFTER">
+                <span>parallel.ApplicationHooks.quit()</span>
+      <div>
+        <textarea disabled class="code-block">java.lang.NullPointerException
+	at parallel.ApplicationHooks.quit(ApplicationHooks.java:46)
+</textarea>
+      
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="34"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Home Page feature</p>
+            <p class="text-sm">
+              <span>12:44:56 PM</span> / <span>00:00:00:288</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">Home Page feature</h5>
+<span class='badge badge-success'>12.29.2022 12:44:56 PM</span>
+<span class='badge badge-danger'>12.29.2022 12:44:57 PM</span>
+<span class='badge badge-default'>00:00:00:288</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=34</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="35"><span class="badge log fail-bg mr-2">Fail</span>Home page title</div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step fail-bg" title="BEFORE">
+                <span>parallel.ApplicationHooks.launchBrowser()</span>
+      <div>
+        <textarea disabled class="code-block">org.openqa.selenium.WebDriverException: unknown error: cannot find Chrome binary
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'ip-172-31-89-32.ec2.internal', ip: '172.31.89.32', os.name: 'Linux', os.arch: 'amd64', os.version: '5.10.157-139.675.amzn2.x86_64', java.version: '1.8.0_342'
+Driver info: driver.version: ChromeDriver
+remote stacktrace: #0 0x562dae65b2a3 <unknown>
+#1 0x562dae419f77 <unknown>
+#2 0x562dae440047 <unknown>
+#3 0x562dae43e7d0 <unknown>
+#4 0x562dae47f0b7 <unknown>
+#5 0x562dae47ea5f <unknown>
+#6 0x562dae476903 <unknown>
+#7 0x562dae449ece <unknown>
+#8 0x562dae44afde <unknown>
+#9 0x562dae6ab63e <unknown>
+#10 0x562dae6aeb79 <unknown>
+#11 0x562dae69189e <unknown>
+#12 0x562dae6afa83 <unknown>
+#13 0x562dae684505 <unknown>
+#14 0x562dae6d0ca8 <unknown>
+#15 0x562dae6d0e36 <unknown>
+#16 0x562dae6ec333 <unknown>
+#17 0x7fb1ef40744b start_thread
+
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$errorHandler$0(W3CHandshakeResponse.java:62)
+	at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
+	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+	at java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:958)
+	at java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:126)
+	at java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:499)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:486)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472)
+	at java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:152)
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:531)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:131)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:181)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:168)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:123)
+	at qa.factory.DriverFactory.init_driver(DriverFactory.java:31)
+	at parallel.ApplicationHooks.launchBrowser(ApplicationHooks.java:38)
+</textarea>
+      
+      </div>
+              </div>
+              <div class="step skip-bg" title="parallel.HomePageSteps.user_has_already_loggen_to_application(io.cucumber.datatable.DataTable)">
                 <span>Given user has already loggen to application</span>
       <div><table class='markup-table table '><tr><td>username</td><td></td><td>password</td></tr><tr><td>admin@botprise.com</td><td></td><td>BotpriseTeam2021$$</td></tr></table>
       </div>
-      <div>
+      <div>Step skipped
       </div>
               </div>
-              <div class="step pass-bg" title="parallel.HomePageSteps.user_is_on_home_page()">
+              <div class="step skip-bg" title="parallel.HomePageSteps.user_is_on_home_page()">
                 <span>Given user is on home page</span>
-      <div>
+      <div>Step skipped
       </div>
               </div>
-              <div class="step pass-bg" title="parallel.LoginPageSteps.user_gets_title()">
+              <div class="step skip-bg" title="parallel.LoginPageSteps.user_gets_title()">
                 <span>When user gets title</span>
-      <div>
+      <div>Step skipped
       </div>
               </div>
-              <div class="step pass-bg" title="parallel.LoginPageSteps.title_should_be(java.lang.String)">
+              <div class="step skip-bg" title="parallel.LoginPageSteps.title_should_be(java.lang.String)">
                 <span>Then title should be "Botprise Staging"</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step fail-bg" title="AFTER">
+                <span>parallel.ApplicationHooks.quit()</span>
       <div>
+        <textarea disabled class="code-block">java.lang.NullPointerException
+	at parallel.ApplicationHooks.quit(ApplicationHooks.java:46)
+</textarea>
+      
       </div>
               </div>
           </div>
@@ -291,33 +860,783 @@ eventsCount: 5,
   <div class="card">
     <div class="card-header" role="tab">
       <div class="card-title">
-        <div class="node" id="11"><span class="badge log pass-bg mr-2">Pass</span>user checks Botprise lab name</div>
+        <div class="node" id="43"><span class="badge log fail-bg mr-2">Fail</span>user checks Botprise lab name</div>
       </div>
     </div>
-        <div class="collapse">
+        <div class="">
           <div class="card-body">
-              <div class="step pass-bg" title="parallel.HomePageSteps.user_has_already_loggen_to_application(io.cucumber.datatable.DataTable)">
+              <div class="step fail-bg" title="BEFORE">
+                <span>parallel.ApplicationHooks.launchBrowser()</span>
+      <div>
+        <textarea disabled class="code-block">org.openqa.selenium.WebDriverException: unknown error: cannot find Chrome binary
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'ip-172-31-89-32.ec2.internal', ip: '172.31.89.32', os.name: 'Linux', os.arch: 'amd64', os.version: '5.10.157-139.675.amzn2.x86_64', java.version: '1.8.0_342'
+Driver info: driver.version: ChromeDriver
+remote stacktrace: #0 0x559df3dab2a3 <unknown>
+#1 0x559df3b69f77 <unknown>
+#2 0x559df3b90047 <unknown>
+#3 0x559df3b8e7d0 <unknown>
+#4 0x559df3bcf0b7 <unknown>
+#5 0x559df3bcea5f <unknown>
+#6 0x559df3bc6903 <unknown>
+#7 0x559df3b99ece <unknown>
+#8 0x559df3b9afde <unknown>
+#9 0x559df3dfb63e <unknown>
+#10 0x559df3dfeb79 <unknown>
+#11 0x559df3de189e <unknown>
+#12 0x559df3dffa83 <unknown>
+#13 0x559df3dd4505 <unknown>
+#14 0x559df3e20ca8 <unknown>
+#15 0x559df3e20e36 <unknown>
+#16 0x559df3e3c333 <unknown>
+#17 0x7ff06daa044b start_thread
+
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$errorHandler$0(W3CHandshakeResponse.java:62)
+	at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
+	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+	at java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:958)
+	at java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:126)
+	at java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:499)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:486)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472)
+	at java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:152)
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:531)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:131)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:181)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:168)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:123)
+	at qa.factory.DriverFactory.init_driver(DriverFactory.java:31)
+	at parallel.ApplicationHooks.launchBrowser(ApplicationHooks.java:38)
+</textarea>
+      
+      </div>
+              </div>
+              <div class="step skip-bg" title="parallel.HomePageSteps.user_has_already_loggen_to_application(io.cucumber.datatable.DataTable)">
                 <span>Given user has already loggen to application</span>
       <div><table class='markup-table table '><tr><td>username</td><td></td><td>password</td></tr><tr><td>admin@botprise.com</td><td></td><td>BotpriseTeam2021$$</td></tr></table>
       </div>
-      <div>
+      <div>Step skipped
       </div>
               </div>
-              <div class="step pass-bg" title="parallel.HomePageSteps.user_is_on_home_page()">
+              <div class="step skip-bg" title="parallel.HomePageSteps.user_is_on_home_page()">
                 <span>Given user is on home page</span>
-      <div>
+      <div>Step skipped
       </div>
               </div>
-              <div class="step pass-bg" title="parallel.HomePageSteps.user_gets_copany_name(io.cucumber.datatable.DataTable)">
+              <div class="step skip-bg" title="parallel.HomePageSteps.user_gets_copany_name(io.cucumber.datatable.DataTable)">
                 <span>Then user gets copany name</span>
       <div><table class='markup-table table '><tr><td>companynamet</td><td></td><td>no company Name</td></tr><tr><td>Botprise Lab</td><td></td><td>BotpriseTeam2021$$e</td></tr></table>
       </div>
-      <div>
+      <div>Step skipped
       </div>
               </div>
-              <div class="step pass-bg" title="parallel.HomePageSteps.company_name_should_be(java.lang.String)">
+              <div class="step skip-bg" title="parallel.HomePageSteps.company_name_should_be(java.lang.String)">
                 <span>And company name should be "Botprise Lab"</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step fail-bg" title="AFTER">
+                <span>parallel.ApplicationHooks.quit()</span>
       <div>
+        <textarea disabled class="code-block">java.lang.NullPointerException
+	at parallel.ApplicationHooks.quit(ApplicationHooks.java:46)
+</textarea>
+      
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="51"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Verify Integration Mesh</p>
+            <p class="text-sm">
+              <span>12:44:57 PM</span> / <span>00:00:00:146</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">Verify Integration Mesh</h5>
+<span class='badge badge-success'>12.29.2022 12:44:57 PM</span>
+<span class='badge badge-danger'>12.29.2022 12:44:57 PM</span>
+<span class='badge badge-default'>00:00:00:146</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=51</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="52"><span class="badge log fail-bg mr-2">Fail</span>Integration Creation From Integration Mesh</div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step fail-bg" title="BEFORE">
+                <span>parallel.ApplicationHooks.launchBrowser()</span>
+      <div>
+        <textarea disabled class="code-block">org.openqa.selenium.WebDriverException: unknown error: cannot find Chrome binary
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'ip-172-31-89-32.ec2.internal', ip: '172.31.89.32', os.name: 'Linux', os.arch: 'amd64', os.version: '5.10.157-139.675.amzn2.x86_64', java.version: '1.8.0_342'
+Driver info: driver.version: ChromeDriver
+remote stacktrace: #0 0x56526f2862a3 <unknown>
+#1 0x56526f044f77 <unknown>
+#2 0x56526f06b047 <unknown>
+#3 0x56526f0697d0 <unknown>
+#4 0x56526f0aa0b7 <unknown>
+#5 0x56526f0a9a5f <unknown>
+#6 0x56526f0a1903 <unknown>
+#7 0x56526f074ece <unknown>
+#8 0x56526f075fde <unknown>
+#9 0x56526f2d663e <unknown>
+#10 0x56526f2d9b79 <unknown>
+#11 0x56526f2bc89e <unknown>
+#12 0x56526f2daa83 <unknown>
+#13 0x56526f2af505 <unknown>
+#14 0x56526f2fbca8 <unknown>
+#15 0x56526f2fbe36 <unknown>
+#16 0x56526f317333 <unknown>
+#17 0x7f1e7a48344b start_thread
+
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$errorHandler$0(W3CHandshakeResponse.java:62)
+	at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
+	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+	at java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:958)
+	at java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:126)
+	at java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:499)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:486)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472)
+	at java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:152)
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:531)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:131)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:181)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:168)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:123)
+	at qa.factory.DriverFactory.init_driver(DriverFactory.java:31)
+	at parallel.ApplicationHooks.launchBrowser(ApplicationHooks.java:38)
+</textarea>
+      
+      </div>
+              </div>
+              <div class="step skip-bg" title="parallel.IntegrationMeshSteps.user_logs_into_stageapp()">
+                <span>Given User logs into stageapp</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="parallel.IntegrationMeshSteps.user_goes_to_integration_mesh_page()">
+                <span>When User goes to Integration Mesh Page</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="parallel.IntegrationMeshSteps.user_creates_integration_with_username_password_and_url(java.lang.String,java.lang.String,java.lang.String)">
+                <span>Then User Creates Integration with username "admin" password "eh8+IZ%zZiU8" and url "dev59080.service-now.com"</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step fail-bg" title="AFTER">
+                <span>parallel.ApplicationHooks.quit()</span>
+      <div>
+        <textarea disabled class="code-block">java.lang.NullPointerException
+	at parallel.ApplicationHooks.quit(ApplicationHooks.java:46)
+</textarea>
+      
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="59"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Integration Modeller test</p>
+            <p class="text-sm">
+              <span>12:44:57 PM</span> / <span>00:00:00:132</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">Integration Modeller test</h5>
+<span class='badge badge-success'>12.29.2022 12:44:57 PM</span>
+<span class='badge badge-danger'>12.29.2022 12:44:57 PM</span>
+<span class='badge badge-default'>00:00:00:132</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=59</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="60"><span class="badge log fail-bg mr-2">Fail</span>Verification of Integration modeller.</div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step fail-bg" title="BEFORE">
+                <span>parallel.ApplicationHooks.launchBrowser()</span>
+      <div>
+        <textarea disabled class="code-block">org.openqa.selenium.WebDriverException: unknown error: cannot find Chrome binary
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'ip-172-31-89-32.ec2.internal', ip: '172.31.89.32', os.name: 'Linux', os.arch: 'amd64', os.version: '5.10.157-139.675.amzn2.x86_64', java.version: '1.8.0_342'
+Driver info: driver.version: ChromeDriver
+remote stacktrace: #0 0x5648452132a3 <unknown>
+#1 0x564844fd1f77 <unknown>
+#2 0x564844ff8047 <unknown>
+#3 0x564844ff67d0 <unknown>
+#4 0x5648450370b7 <unknown>
+#5 0x564845036a5f <unknown>
+#6 0x56484502e903 <unknown>
+#7 0x564845001ece <unknown>
+#8 0x564845002fde <unknown>
+#9 0x56484526363e <unknown>
+#10 0x564845266b79 <unknown>
+#11 0x56484524989e <unknown>
+#12 0x564845267a83 <unknown>
+#13 0x56484523c505 <unknown>
+#14 0x564845288ca8 <unknown>
+#15 0x564845288e36 <unknown>
+#16 0x5648452a4333 <unknown>
+#17 0x7f0a07c7644b start_thread
+
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$errorHandler$0(W3CHandshakeResponse.java:62)
+	at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
+	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+	at java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:958)
+	at java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:126)
+	at java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:499)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:486)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472)
+	at java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:152)
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:531)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:131)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:181)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:168)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:123)
+	at qa.factory.DriverFactory.init_driver(DriverFactory.java:31)
+	at parallel.ApplicationHooks.launchBrowser(ApplicationHooks.java:38)
+</textarea>
+      
+      </div>
+              </div>
+              <div class="step skip-bg" title="parallel.IntegrationModellerSteps.login_to_stageapp()">
+                <span>Given login to stageapp</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="parallel.IntegrationModellerSteps.go_to_integrations_page()">
+                <span>When go to integrations page</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="parallel.IntegrationModellerSteps.create_integration_through_modeller_with_curl_curl_xpost_h_content_type_application_json_d_u_$username_username_admin_servicenow_instance_dev59080_service_now_com_password_eh8_iz_z_zi_u8(java.lang.String,java.lang.String,java.lang.String)">
+                <span>Then create integration through modeller with curl "curl -XPOST -H "Content-type: application/json" -d '{"description":"Test Description"}' 'https://$servicenow_instance/api/now/table/incident' -u $username:'$password'" username "admin" servicenow_instance "dev59080.service-now.com" password "eh8+IZ%zZiU8"</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step fail-bg" title="AFTER">
+                <span>parallel.ApplicationHooks.quit()</span>
+      <div>
+        <textarea disabled class="code-block">java.lang.NullPointerException
+	at parallel.ApplicationHooks.quit(ApplicationHooks.java:46)
+</textarea>
+      
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="67"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">login page Test</p>
+            <p class="text-sm">
+              <span>12:44:57 PM</span> / <span>00:00:00:615</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">login page Test</h5>
+<span class='badge badge-success'>12.29.2022 12:44:57 PM</span>
+<span class='badge badge-danger'>12.29.2022 12:44:58 PM</span>
+<span class='badge badge-default'>00:00:00:615</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=67</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="68"><span class="badge log fail-bg mr-2">Fail</span>get login page title</div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step fail-bg" title="BEFORE">
+                <span>parallel.ApplicationHooks.launchBrowser()</span>
+      <div>
+        <textarea disabled class="code-block">org.openqa.selenium.WebDriverException: unknown error: cannot find Chrome binary
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'ip-172-31-89-32.ec2.internal', ip: '172.31.89.32', os.name: 'Linux', os.arch: 'amd64', os.version: '5.10.157-139.675.amzn2.x86_64', java.version: '1.8.0_342'
+Driver info: driver.version: ChromeDriver
+remote stacktrace: #0 0x557a053342a3 <unknown>
+#1 0x557a050f2f77 <unknown>
+#2 0x557a05119047 <unknown>
+#3 0x557a051177d0 <unknown>
+#4 0x557a051580b7 <unknown>
+#5 0x557a05157a5f <unknown>
+#6 0x557a0514f903 <unknown>
+#7 0x557a05122ece <unknown>
+#8 0x557a05123fde <unknown>
+#9 0x557a0538463e <unknown>
+#10 0x557a05387b79 <unknown>
+#11 0x557a0536a89e <unknown>
+#12 0x557a05388a83 <unknown>
+#13 0x557a0535d505 <unknown>
+#14 0x557a053a9ca8 <unknown>
+#15 0x557a053a9e36 <unknown>
+#16 0x557a053c5333 <unknown>
+#17 0x7f2318d9544b start_thread
+
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$errorHandler$0(W3CHandshakeResponse.java:62)
+	at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
+	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+	at java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:958)
+	at java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:126)
+	at java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:499)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:486)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472)
+	at java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:152)
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:531)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:131)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:181)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:168)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:123)
+	at qa.factory.DriverFactory.init_driver(DriverFactory.java:31)
+	at parallel.ApplicationHooks.launchBrowser(ApplicationHooks.java:38)
+</textarea>
+      
+      </div>
+              </div>
+              <div class="step skip-bg" title="parallel.LoginPageSteps.user_is_on_login_page()">
+                <span>Given user is on login page</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="parallel.LoginPageSteps.user_gets_title()">
+                <span>When user gets title</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="parallel.LoginPageSteps.title_should_be(java.lang.String)">
+                <span>Then title should be "Botprise Staging"</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step fail-bg" title="AFTER">
+                <span>parallel.ApplicationHooks.quit()</span>
+      <div>
+        <textarea disabled class="code-block">java.lang.NullPointerException
+	at parallel.ApplicationHooks.quit(ApplicationHooks.java:46)
+</textarea>
+      
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="75"><span class="badge log fail-bg mr-2">Fail</span>check forgot password link is available</div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step fail-bg" title="BEFORE">
+                <span>parallel.ApplicationHooks.launchBrowser()</span>
+      <div>
+        <textarea disabled class="code-block">org.openqa.selenium.WebDriverException: unknown error: cannot find Chrome binary
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'ip-172-31-89-32.ec2.internal', ip: '172.31.89.32', os.name: 'Linux', os.arch: 'amd64', os.version: '5.10.157-139.675.amzn2.x86_64', java.version: '1.8.0_342'
+Driver info: driver.version: ChromeDriver
+remote stacktrace: #0 0x5638c96c12a3 <unknown>
+#1 0x5638c947ff77 <unknown>
+#2 0x5638c94a6047 <unknown>
+#3 0x5638c94a47d0 <unknown>
+#4 0x5638c94e50b7 <unknown>
+#5 0x5638c94e4a5f <unknown>
+#6 0x5638c94dc903 <unknown>
+#7 0x5638c94afece <unknown>
+#8 0x5638c94b0fde <unknown>
+#9 0x5638c971163e <unknown>
+#10 0x5638c9714b79 <unknown>
+#11 0x5638c96f789e <unknown>
+#12 0x5638c9715a83 <unknown>
+#13 0x5638c96ea505 <unknown>
+#14 0x5638c9736ca8 <unknown>
+#15 0x5638c9736e36 <unknown>
+#16 0x5638c9752333 <unknown>
+#17 0x7f3e418c944b start_thread
+
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$errorHandler$0(W3CHandshakeResponse.java:62)
+	at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
+	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+	at java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:958)
+	at java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:126)
+	at java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:499)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:486)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472)
+	at java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:152)
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:531)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:131)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:181)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:168)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:123)
+	at qa.factory.DriverFactory.init_driver(DriverFactory.java:31)
+	at parallel.ApplicationHooks.launchBrowser(ApplicationHooks.java:38)
+</textarea>
+      
+      </div>
+              </div>
+              <div class="step skip-bg" title="parallel.LoginPageSteps.user_is_on_login_page()">
+                <span>Given user is on login page</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="parallel.LoginPageSteps.user_check_forgot_password_link_is_displayed()">
+                <span>When user check forgot password link is displayed</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step fail-bg" title="AFTER">
+                <span>parallel.ApplicationHooks.quit()</span>
+      <div>
+        <textarea disabled class="code-block">java.lang.NullPointerException
+	at parallel.ApplicationHooks.quit(ApplicationHooks.java:46)
+</textarea>
+      
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="81"><span class="badge log fail-bg mr-2">Fail</span>User Login with correct credentials</div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step fail-bg" title="BEFORE">
+                <span>parallel.ApplicationHooks.launchBrowser()</span>
+      <div>
+        <textarea disabled class="code-block">org.openqa.selenium.WebDriverException: unknown error: cannot find Chrome binary
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'ip-172-31-89-32.ec2.internal', ip: '172.31.89.32', os.name: 'Linux', os.arch: 'amd64', os.version: '5.10.157-139.675.amzn2.x86_64', java.version: '1.8.0_342'
+Driver info: driver.version: ChromeDriver
+remote stacktrace: #0 0x55816291e2a3 <unknown>
+#1 0x5581626dcf77 <unknown>
+#2 0x558162703047 <unknown>
+#3 0x5581627017d0 <unknown>
+#4 0x5581627420b7 <unknown>
+#5 0x558162741a5f <unknown>
+#6 0x558162739903 <unknown>
+#7 0x55816270cece <unknown>
+#8 0x55816270dfde <unknown>
+#9 0x55816296e63e <unknown>
+#10 0x558162971b79 <unknown>
+#11 0x55816295489e <unknown>
+#12 0x558162972a83 <unknown>
+#13 0x558162947505 <unknown>
+#14 0x558162993ca8 <unknown>
+#15 0x558162993e36 <unknown>
+#16 0x5581629af333 <unknown>
+#17 0x7fbe1d0e644b start_thread
+
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$errorHandler$0(W3CHandshakeResponse.java:62)
+	at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
+	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+	at java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:958)
+	at java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:126)
+	at java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:499)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:486)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472)
+	at java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:152)
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:531)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:131)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:181)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:168)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:123)
+	at qa.factory.DriverFactory.init_driver(DriverFactory.java:31)
+	at parallel.ApplicationHooks.launchBrowser(ApplicationHooks.java:38)
+</textarea>
+      
+      </div>
+              </div>
+              <div class="step skip-bg" title="parallel.LoginPageSteps.user_is_on_login_page()">
+                <span>Given user is on login page</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="parallel.LoginPageSteps.user_enters_username(java.lang.String)">
+                <span>When user enters username "admin@botprise.com"</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="parallel.LoginPageSteps.user_enters_pwd(java.lang.String)">
+                <span>And user enters pwd "BotpriseTeam2021$$"</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="parallel.LoginPageSteps.user_clicks_on_login_button()">
+                <span>And user clicks on login button</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step fail-bg" title="AFTER">
+                <span>parallel.ApplicationHooks.quit()</span>
+      <div>
+        <textarea disabled class="code-block">java.lang.NullPointerException
+	at parallel.ApplicationHooks.quit(ApplicationHooks.java:46)
+</textarea>
+      
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="89"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Security ManageMent</p>
+            <p class="text-sm">
+              <span>12:44:58 PM</span> / <span>00:00:00:100</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">Security ManageMent</h5>
+<span class='badge badge-success'>12.29.2022 12:44:58 PM</span>
+<span class='badge badge-danger'>12.29.2022 12:44:58 PM</span>
+<span class='badge badge-default'>00:00:00:100</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=89</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="90"><span class="badge log fail-bg mr-2">Fail</span>Verify Secret creation and Credential Profile creation</div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step fail-bg" title="BEFORE">
+                <span>parallel.ApplicationHooks.launchBrowser()</span>
+      <div>
+        <textarea disabled class="code-block">org.openqa.selenium.WebDriverException: unknown error: cannot find Chrome binary
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'ip-172-31-89-32.ec2.internal', ip: '172.31.89.32', os.name: 'Linux', os.arch: 'amd64', os.version: '5.10.157-139.675.amzn2.x86_64', java.version: '1.8.0_342'
+Driver info: driver.version: ChromeDriver
+remote stacktrace: #0 0x5646705782a3 <unknown>
+#1 0x564670336f77 <unknown>
+#2 0x56467035d047 <unknown>
+#3 0x56467035b7d0 <unknown>
+#4 0x56467039c0b7 <unknown>
+#5 0x56467039ba5f <unknown>
+#6 0x564670393903 <unknown>
+#7 0x564670366ece <unknown>
+#8 0x564670367fde <unknown>
+#9 0x5646705c863e <unknown>
+#10 0x5646705cbb79 <unknown>
+#11 0x5646705ae89e <unknown>
+#12 0x5646705cca83 <unknown>
+#13 0x5646705a1505 <unknown>
+#14 0x5646705edca8 <unknown>
+#15 0x5646705ede36 <unknown>
+#16 0x564670609333 <unknown>
+#17 0x7fd1e771844b start_thread
+
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$errorHandler$0(W3CHandshakeResponse.java:62)
+	at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
+	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+	at java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:958)
+	at java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:126)
+	at java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:499)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:486)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472)
+	at java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:152)
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:531)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:131)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:181)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:168)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:123)
+	at qa.factory.DriverFactory.init_driver(DriverFactory.java:31)
+	at parallel.ApplicationHooks.launchBrowser(ApplicationHooks.java:38)
+</textarea>
+      
+      </div>
+              </div>
+              <div class="step skip-bg" title="parallel.SecurityManagementStpes.user_login_to_stageapp()">
+                <span>Given user login to stageapp</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="parallel.SecurityManagementStpes.user_goes_to_security_page()">
+                <span>When user goes to security page</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="parallel.SecurityManagementStpes.user_creates_secret()">
+                <span>Then user creates secret</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="parallel.SecurityManagementStpes.user_crreates_creds_profile()">
+                <span>And User Crreates Creds profile</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step fail-bg" title="AFTER">
+                <span>parallel.ApplicationHooks.quit()</span>
+      <div>
+        <textarea disabled class="code-block">java.lang.NullPointerException
+	at parallel.ApplicationHooks.quit(ApplicationHooks.java:46)
+</textarea>
+      
       </div>
               </div>
           </div>
@@ -335,7 +1654,315 @@ eventsCount: 5,
 </div>
 <div class="test-content-detail"><div class="detail-body"></div></div>
 </div></div>
-        </div>
+<div class="test-wrapper row view exception-view attributes-view">
+<div class="test-list">
+<div class="test-list-tools">
+<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Exception</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">2</span></a></li></ul>
+</div>
+<div class="test-list-wrapper scrollable">
+<ul class="test-list-item">
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>12</span>
+</span>
+<p class="name">org.openqa.selenium.WebDriverException</p>
+<p class="duration text-sm">12 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>org.openqa.selenium.WebDriverException</h4>
+<span status="fail" class='badge log badge-danger'>12 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>12:44:52 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='4'>parallel.ApplicationHooks.launchBrowser()</a>
+<div class="">
+<span class="badge badge-default">AssetManagmenet.Go to assetmanagement and create assets.parallel.ApplicationHooks.launchBrowser()</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>12:44:56 PM</td>
+<td>
+<a href="#" class="linked" test-id='9' id='12'>parallel.ApplicationHooks.launchBrowser()</a>
+<div class="">
+<span class="badge badge-default">BAU Modeller test.Verification of BAU modeller..parallel.ApplicationHooks.launchBrowser()</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>12:44:56 PM</td>
+<td>
+<a href="#" class="linked" test-id='18' id='21'>parallel.ApplicationHooks.launchBrowser()</a>
+<div class="">
+<span class="badge badge-default">Create OpenTicket In Servicenow BAU.verify creation of Open Servicenow Ticket BAU.parallel.ApplicationHooks.launchBrowser()</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>12:44:56 PM</td>
+<td>
+<a href="#" class="linked" test-id='26' id='29'>parallel.ApplicationHooks.launchBrowser()</a>
+<div class="">
+<span class="badge badge-default">verification of BTU creation and check existance.User creates BTU.parallel.ApplicationHooks.launchBrowser()</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>12:44:56 PM</td>
+<td>
+<a href="#" class="linked" test-id='34' id='37'>parallel.ApplicationHooks.launchBrowser()</a>
+<div class="">
+<span class="badge badge-default">Home Page feature.Home page title.parallel.ApplicationHooks.launchBrowser()</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>12:44:56 PM</td>
+<td>
+<a href="#" class="linked" test-id='34' id='45'>parallel.ApplicationHooks.launchBrowser()</a>
+<div class="">
+<span class="badge badge-default">Home Page feature.user checks Botprise lab name.parallel.ApplicationHooks.launchBrowser()</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>12:44:57 PM</td>
+<td>
+<a href="#" class="linked" test-id='51' id='54'>parallel.ApplicationHooks.launchBrowser()</a>
+<div class="">
+<span class="badge badge-default">Verify Integration Mesh.Integration Creation From Integration Mesh.parallel.ApplicationHooks.launchBrowser()</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>12:44:57 PM</td>
+<td>
+<a href="#" class="linked" test-id='59' id='62'>parallel.ApplicationHooks.launchBrowser()</a>
+<div class="">
+<span class="badge badge-default">Integration Modeller test.Verification of Integration modeller..parallel.ApplicationHooks.launchBrowser()</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>12:44:57 PM</td>
+<td>
+<a href="#" class="linked" test-id='67' id='70'>parallel.ApplicationHooks.launchBrowser()</a>
+<div class="">
+<span class="badge badge-default">login page Test.get login page title.parallel.ApplicationHooks.launchBrowser()</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>12:44:57 PM</td>
+<td>
+<a href="#" class="linked" test-id='67' id='77'>parallel.ApplicationHooks.launchBrowser()</a>
+<div class="">
+<span class="badge badge-default">login page Test.check forgot password link is available.parallel.ApplicationHooks.launchBrowser()</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>12:44:57 PM</td>
+<td>
+<a href="#" class="linked" test-id='67' id='83'>parallel.ApplicationHooks.launchBrowser()</a>
+<div class="">
+<span class="badge badge-default">login page Test.User Login with correct credentials.parallel.ApplicationHooks.launchBrowser()</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>12:44:58 PM</td>
+<td>
+<a href="#" class="linked" test-id='89' id='92'>parallel.ApplicationHooks.launchBrowser()</a>
+<div class="">
+<span class="badge badge-default">Security ManageMent.Verify Secret creation and Credential Profile creation.parallel.ApplicationHooks.launchBrowser()</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>12</span>
+</span>
+<p class="name">java.lang.NullPointerException</p>
+<p class="duration text-sm">12 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>java.lang.NullPointerException</h4>
+<span status="fail" class='badge log badge-danger'>12 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>12:44:56 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='8'>parallel.ApplicationHooks.quit()</a>
+<div class="">
+<span class="badge badge-default">AssetManagmenet.Go to assetmanagement and create assets.parallel.ApplicationHooks.quit()</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>12:44:56 PM</td>
+<td>
+<a href="#" class="linked" test-id='9' id='17'>parallel.ApplicationHooks.quit()</a>
+<div class="">
+<span class="badge badge-default">BAU Modeller test.Verification of BAU modeller..parallel.ApplicationHooks.quit()</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>12:44:56 PM</td>
+<td>
+<a href="#" class="linked" test-id='18' id='25'>parallel.ApplicationHooks.quit()</a>
+<div class="">
+<span class="badge badge-default">Create OpenTicket In Servicenow BAU.verify creation of Open Servicenow Ticket BAU.parallel.ApplicationHooks.quit()</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>12:44:56 PM</td>
+<td>
+<a href="#" class="linked" test-id='26' id='33'>parallel.ApplicationHooks.quit()</a>
+<div class="">
+<span class="badge badge-default">verification of BTU creation and check existance.User creates BTU.parallel.ApplicationHooks.quit()</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>12:44:56 PM</td>
+<td>
+<a href="#" class="linked" test-id='34' id='42'>parallel.ApplicationHooks.quit()</a>
+<div class="">
+<span class="badge badge-default">Home Page feature.Home page title.parallel.ApplicationHooks.quit()</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>12:44:57 PM</td>
+<td>
+<a href="#" class="linked" test-id='34' id='50'>parallel.ApplicationHooks.quit()</a>
+<div class="">
+<span class="badge badge-default">Home Page feature.user checks Botprise lab name.parallel.ApplicationHooks.quit()</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>12:44:57 PM</td>
+<td>
+<a href="#" class="linked" test-id='51' id='58'>parallel.ApplicationHooks.quit()</a>
+<div class="">
+<span class="badge badge-default">Verify Integration Mesh.Integration Creation From Integration Mesh.parallel.ApplicationHooks.quit()</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>12:44:57 PM</td>
+<td>
+<a href="#" class="linked" test-id='59' id='66'>parallel.ApplicationHooks.quit()</a>
+<div class="">
+<span class="badge badge-default">Integration Modeller test.Verification of Integration modeller..parallel.ApplicationHooks.quit()</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>12:44:57 PM</td>
+<td>
+<a href="#" class="linked" test-id='67' id='74'>parallel.ApplicationHooks.quit()</a>
+<div class="">
+<span class="badge badge-default">login page Test.get login page title.parallel.ApplicationHooks.quit()</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>12:44:57 PM</td>
+<td>
+<a href="#" class="linked" test-id='67' id='80'>parallel.ApplicationHooks.quit()</a>
+<div class="">
+<span class="badge badge-default">login page Test.check forgot password link is available.parallel.ApplicationHooks.quit()</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>12:44:58 PM</td>
+<td>
+<a href="#" class="linked" test-id='67' id='88'>parallel.ApplicationHooks.quit()</a>
+<div class="">
+<span class="badge badge-default">login page Test.User Login with correct credentials.parallel.ApplicationHooks.quit()</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>12:44:58 PM</td>
+<td>
+<a href="#" class="linked" test-id='89' id='97'>parallel.ApplicationHooks.quit()</a>
+<div class="">
+<span class="badge badge-default">Security ManageMent.Verify Secret creation and Credential Profile creation.parallel.ApplicationHooks.quit()</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="test-content scrollable">
+<div class="test-content-detail">
+<div class="detail-body"></div>
+</div>
+</div>
+</div>        </div>
       </div>
     </div>
   </div>
