@@ -144,7 +144,7 @@ JavascriptExecutor jse = (JavascriptExecutor)driver;
 		
 		
 		
-		StringSelection filepath= new  StringSelection("C:\Users\Deva\Downloads\servicenow.jpg");
+		StringSelection filepath= new  StringSelection("C:\\Users\\Deva\\Downloads\\servicenow.jpg");
 		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(filepath, null);
 		Thread.sleep(1000);
 		rr.keyPress(KeyEvent.VK_CONTROL);
