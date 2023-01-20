@@ -33,6 +33,7 @@ public class AssetManagemnetPage {
 	
 	private By createbtn = By.xpath("(//p[contains(text(),\"Add\")])[1]");
 	
+	
 	private By devicename = By.xpath("//input[@id='device_list_name']");
 	private By description = By.xpath("//input[@id='description']");
 	private By devicetype = By.xpath("//div[@id='device_type']");
